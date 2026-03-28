@@ -12,7 +12,7 @@ A comprehensive data engineering solution for processing, transforming, and ware
 - [Project Structure](#project-structure)
 - [Setup & Installation](#setup--installation)
 - [Data Processing](#data-processing)
-- [Data Warehouse](#data-warehouse)
+- [Database](#database)
 - [Analytics & Visualization](#analytics--visualization)
 - [Key Features](#key-features)
 - [Usage](#usage)
@@ -22,7 +22,7 @@ A comprehensive data engineering solution for processing, transforming, and ware
 
 ## 📌 Project Overview
 
-This project implements an end-to-end data engineering pipeline to process and analyze consumer shopping behavior for a retail company. The solution extracts, transforms, and loads (ETL) raw customer transaction data into a structured warehouse, enabling stakeholders to identify trends, optimize marketing strategies, and improve customer engagement.
+This project implements an end-to-end data engineering pipeline to process and analyze consumer shopping behavior for a retail company. The solution extracts, transforms, and loads (ETL) raw customer transaction data into a structured database, enabling stakeholders to identify trends, optimize marketing strategies, and improve customer engagement.
 
 ### Business Objectives
 - Understand purchasing patterns across demographics and product categories
@@ -51,7 +51,7 @@ This project implements an end-to-end data engineering pipeline to process and a
                        │
                        ▼
 ┌─────────────────────────────────────────────────────────────────┐
-│           Data Warehouse / Structured Layer                     │
+│           Database / Structured Layer                     │
 │  (Cleaned, normalized customer and transaction data)            │
 └──────────────────────┬──────────────────────────────────────────┘
                        │
@@ -71,7 +71,7 @@ This project implements an end-to-end data engineering pipeline to process and a
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
 | **Data Processing** | Python 3.x, Pandas, NumPy | ETL, Data transformation, imputation |
-| **Data Warehouse** | SQL (relational database) | Structured data storage, querying |
+| **Database** | SQL (relational database) | Structured data storage, querying |
 | **Data Quality** | Python validation scripts | Data profiling, anomaly detection |
 | **Visualization** | Power BI | Interactive dashboards, insights |
 | **Version Control** | Git, GitHub | Source code management |
@@ -100,10 +100,10 @@ This project implements an end-to-end data engineering pipeline to process and a
 ### **4. Data Enrichment**
 - Enrich customer transaction data with behavioral metrics
 - Generate fact and dimension tables
-- Prepare data for warehouse ingestion
+- Prepare data for database ingestion
 
 ### **5. Data Loading**
-- Load transformed data into structured warehouse schema
+- Load transformed data into structured database schema
 - Build indexed relational tables for performance
 - Enable efficient SQL querying
 
@@ -115,7 +115,7 @@ This project implements an end-to-end data engineering pipeline to process and a
 Customer-Shopping-Behavior-Analysis/
 │
 ├── etl_pipeline.ipynb                    # Main ETL notebook (data processing)
-├── warehouse_queries.sql                 # SQL queries for analysis
+├── database_queries.sql                 # SQL queries for analysis
 ├── customer_behavior_dashboard.pbix      # Power BI dashboard
 │
 ├── raw_customer_behavior.csv             # Raw data source
@@ -189,7 +189,7 @@ This approach ensures:
 
 ---
 
-## 🗄️ Data Warehouse
+## 🗄️ Database
 
 ### Schema Design
 
@@ -203,7 +203,7 @@ This approach ensures:
 - `dim_channels` – Sales channels (online, offline)
 - `dim_time` – Temporal dimensions (date, season, month)
 
-### SQL Queries (warehouse_queries.sql)
+### SQL Queries (database_queries.sql)
 
 Example queries include:
 - Customer segmentation by purchase frequency
@@ -249,7 +249,7 @@ Example queries include:
 ✅ **End-to-End ETL Pipeline** – Automated data ingestion, cleaning, and transformation  
 ✅ **Data Quality Framework** – Validation, profiling, and anomaly detection  
 ✅ **Scalable Architecture** – Supports incremental data loads and historical data  
-✅ **SQL-Optimized Queries** – Efficient warehouse queries for analytics  
+✅ **SQL-Optimized Queries** – Efficient database queries for analytics  
 ✅ **Interactive BI Dashboards** – Real-time insights for stakeholders  
 ✅ **Modular Code** – Reusable scripts and organized structure  
 ✅ **Documentation** – Clear comments and data dictionary  
@@ -266,9 +266,9 @@ Example queries include:
    ```
    Execute all cells to transform raw data.
 
-2. **Warehouse Queries:**
+2. **database Queries:**
    - Connect to your SQL database
-   - Execute queries in `warehouse_queries.sql`
+   - Execute queries in `database_queries.sql`
    - Export results for analysis
 
 3. **Dashboarding:**
@@ -278,7 +278,7 @@ Example queries include:
 
 ### Typical Workflow
 ```
-Raw CSV → ETL Processing → Cleaned Data → SQL Warehouse → Power BI Dashboard
+Raw CSV → ETL Processing → Cleaned Data → SQL database → Power BI Dashboard
 ```
 
 ---
